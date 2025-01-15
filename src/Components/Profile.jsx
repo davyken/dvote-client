@@ -20,7 +20,7 @@ const Profile = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:5000/users/profile", {
+        const response = await fetch("https://dvote-server.onrender.com/users/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

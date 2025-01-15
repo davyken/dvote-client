@@ -70,7 +70,7 @@ const ContestModal = ({ isOpen, onClose, setContests }) => {
         throw new Error('Authentication token not found. Please login again.');
       }
 
-      const response = await axios.post(`http://localhost:5000/contests`, submitData, {  
+      const response = await axios.post(`https://dvote-server.onrender.com/contests`, submitData, {  
         headers: {  
           'Authorization': `Bearer ${token}`,  
         },  
