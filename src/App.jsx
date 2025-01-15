@@ -96,7 +96,7 @@ const App = () => {
               <li>
                 <Link
                   className="block py-2"
-                  to="#homepage"
+                  to="/"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
