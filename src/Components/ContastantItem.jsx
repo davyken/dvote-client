@@ -25,7 +25,7 @@ const ContestantItem = ({ contestant, handleVote }) => {
             src={
               contestant.photoUrl.startsWith("http")
                 ? contestant.photoUrl
-                : `http://localhost:5000/${contestant.photoUrl}`
+                : `https://dvote-server.onrender.com/${contestant.photoUrl}`
             }
             alt={contestant.name || "Contestant"}
             className="h-24 w-24 object-cover rounded-full"

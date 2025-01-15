@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchCurrentUser = async (token) => {
     try {
-      const response = await fetch("http://localhost:5000/users/current-user", {
+      const response = await fetch("https://dvote-server.onrender.com/users/current-user", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

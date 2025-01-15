@@ -89,7 +89,7 @@ const Vote = () => {
             {contest.coverPhotoUrl && (
               <div className="mb-8">
                 <img
-                  src={`http://localhost:5000/${contest.coverPhotoUrl.replace(/^\//, '')}`}
+                  src={`https://dvote-server.onrender.com/${contest.coverPhotoUrl.replace(/^\//, '')}`}
                   alt={contest.name}
                   className="w-full h-64 object-cover rounded-lg"
                   onError={(e) => {
@@ -122,7 +122,7 @@ const Vote = () => {
                           <img
                             src={contestant.photoUrl.startsWith('http')
                               ? contestant.photoUrl
-                              : `http://localhost:5000/${contestant.photoUrl}`}
+                              : `https://dvote-server.onrender.com/${contestant.photoUrl}`}
                             alt={contestant.name}
                             className="h-full w-full object-cover"
                             onError={(e) => {
