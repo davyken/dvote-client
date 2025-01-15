@@ -7,7 +7,6 @@ import API_URL from "../Constants/Constants";
 
 const Registration = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -144,42 +143,6 @@ const Registration = () => {
               </div>
               {errors.password && (
                 <p className="text-red-500 text-sm">{errors.password.message}</p>
-              )}
-            </div>
-
-            <div>
-              <div className="flex items-center justify-between">
-                <label
-                  htmlFor="confirmPassword"
-                  className="block text-sm font-medium text-white mb-2"
-                >
-                  Confirm Password
-                </label>
-              </div>
-              <div className="relative flex items-center border border-gray-300 rounded-lg overflow-hidden">
-                <FaLock className="text-white mx-2" />
-                <input
-                  {...register("confirmPassword", {
-                    required: "Please confirm your password",
-                    validate: (value) =>
-                      value === watch("password") || "Passwords do not match",
-                  })}
-                  type={confirmPasswordVisible ? "text" : "password"}
-                  className="bg-white w-full p-2.5 rounded-lg focus:outline-none"
-                  placeholder="••••••••"
-                />
-                <button
-                  type="button"
-                  onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
-                >
-                  {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
-                </button>
-              </div>
-              {errors.confirmPassword && (
-                <p className="text-red-500 text-sm">
-                  {errors.confirmPassword.message}
-                </p>
               )}
             </div>
 
