@@ -14,7 +14,6 @@ const Registration = () => {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
   } = useForm();
 
   const onSubmit = async (data) => {
@@ -143,20 +142,6 @@ const Registration = () => {
               </div>
               {errors.password && (
                 <p className="text-red-500 text-sm">{errors.password.message}</p>
-              )}
-            </div>
-
-            <div className="flex items-center">
-              <input
-                {...register("notARobot", { required: "You must confirm you are not a robot" })}
-                type="checkbox"
-                className="mr-2"
-              />
-              <label className="text-sm text-white">
-                I am not a robot
-              </label>
-              {errors.notARobot && (
-                <p className="text-red-500 text-sm">{errors.notARobot.message}</p>
               )}
             </div>
 
